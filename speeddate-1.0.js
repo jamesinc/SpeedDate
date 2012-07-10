@@ -138,9 +138,7 @@
         // timezones are expressed as offsets from UTC.
         if ( dateParts[13] ) {
             if ( dateParts[13].length === 1 ) {
-                console.log("picked up a nautical designator");
                 offset += ( Date.timezoneFromNauticalDesignator(dateParts[13]) * 60 );
-                console.log( Date.timezoneFromNauticalDesignator(dateParts[13]) * 60 );
             }
         }
 
