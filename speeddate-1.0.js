@@ -25,7 +25,7 @@
  *
  * Date: 2010-06-12T15:13:23+1000
  *
- * Last modified: 2012-07-10T11:35:00+1000
+ * Last modified: 2012-07-10T11:55:23+1000
  */
 
 (function() {
@@ -163,7 +163,7 @@
     // Use if you need to get timezone based on a nautical identifier
     // i.e. K (Kilo time) is the identifier for +1000 (i.e. AEST)
     Date.timezoneFromNauticalDesignator = function ( phonetic ) {
-        var code = phonetic.charCodeAt(0);
+        var code = phonetic.toUpperCase().charCodeAt(0);
 
         // Zulu (also catches Juliet time, which is unassigned)
         if ( code === 90 || code === 74 )
@@ -176,7 +176,7 @@
             return (code - 65);
         // November (-1) to Yankee (-12)
         if ( code >= 78 && code <= 89 )
-            return (0 - (code-78));    
+            return (0 - (code-77));    
     };
 
 })();
