@@ -161,6 +161,8 @@
         if ( dateParts[12] ) date.setMilliseconds(Number("0." + dateParts[12]) * 1000);
         if ( dateParts[14] ) offset += ( Number(dateParts[14]) / 100 * 60 );
 
+        // Having set the date, we should update the offset in case DST comes into play.
+		offset = date.getTimezoneOffset();
         time = ( date.getTime() - (offset * 60 * 1000) );
 
         date.setTime(time);
