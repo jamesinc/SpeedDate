@@ -1,4 +1,5 @@
-SpeedDate
+# SpeedDate
+
 The lightweight, no-framework-necessary library for the Date object.
 
 SpeedDate is a simple set of extension functions for the Date object.
@@ -11,9 +12,7 @@ found them and added them to GitHub.
 Patches welcome.
 
 
-
-TODO
-====
+## TODO
 
 2012-07-10: Add a function to calculate the position of Easter for
             any given year.
